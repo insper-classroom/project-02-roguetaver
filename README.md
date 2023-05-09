@@ -6,9 +6,9 @@
 
 O objetivo deste projeto é utilizar Reinforcement Learning em conjunto com a Unity para desenvolver um agente que é capaz de escapar de uma sala com alguns obstaculos e desafios. Para isso, será utilizada a biblioteca [Unity Machine Learning Agents](https://unity.com/products/machine-learning-agents)
 
-Segue um link para um vídeo de referência, no qual o autor desenvolveu um projeto praticamente igual ao proposto.
+Segue um link para um vídeo de referência feito pelo canal [UIWarehouse](https://www.youtube.com/watch?v=v3UBlEJDXR0), no qual o autor desenvolveu um projeto praticamente igual ao proposto. 
 
-![Alt text](Images/example.png?raw=true, (https://www.youtube.com/watch?v=v3UBlEJDXR0))
+![Alt text](Images/example.png?raw=true)
 
 ## Action Space
 
