@@ -8,7 +8,7 @@ O objetivo deste projeto é utilizar Reinforcement Learning em conjunto com a Un
 
 Segue um link para um vídeo de referência, no qual o autor desenvolveu um projeto praticamente igual ao proposto.
 
-![Alt text](Images/example.png?raw=true, [UI Warehouse](https://www.youtube.com/watch?v=v3UBlEJDXR0))
+![Alt text](Images/example.png?raw=true, (https://www.youtube.com/watch?v=v3UBlEJDXR0))
 
 ## Action Space
 
