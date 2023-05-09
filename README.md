@@ -14,4 +14,4 @@ Segue um link para um vídeo de referência feito pelo canal [UIWarehouse](https
 
 O agente é somente capaz de Andar, para qualquer direção horizontalmente.
 
-Outra ação disponível indiretamente é pressionar um botão no chão, o botão é acionado ao andar com o agente sobre o botão. Os botões 
+Outra ação disponível indiretamente é pressionar um botão no chão, o botão é acionado ao andar com o agente sobre o botão. Os botões quando pressionados abrem portas. 
