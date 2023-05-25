@@ -16,6 +16,7 @@ public class MoveToGoalAgent : Agent
     [SerializeField] private Vector3 initialPosition;
     [SerializeField] private GameObject door;
     [SerializeField] private bool doorIsOpen;
+    public bool trainingMode;
 
     public void Start()
     {
@@ -67,12 +68,16 @@ public class MoveToGoalAgent : Agent
         }
         if(other.TryGetComponent<Exit>(out Exit exit)){
             AddReward(5f);
-            floorMeshRenderer.material = winMaterial;
+            if(trainingMode){
+                floorMeshRenderer.material = winMaterial;
+            }
             EndEpisode();
         }
         if(other.TryGetComponent<Wall>(out Wall wall)){
             SetReward(-1f);
-            floorMeshRenderer.material = loseMaterial;
+            if(trainingMode){
+                floorMeshRenderer.material = loseMaterial;
+            }
             EndEpisode();
         }
         

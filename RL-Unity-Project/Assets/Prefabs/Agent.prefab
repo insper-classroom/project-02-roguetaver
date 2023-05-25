@@ -224,6 +224,8 @@ MonoBehaviour:
   floorMeshRenderer: {fileID: 0}
   initialPosition: {x: 0, y: 0, z: 0}
   door: {fileID: 0}
+  doorIsOpen: 0
+  trainingMode: 1
 --- !u!114 &8467006193473420203
 MonoBehaviour:
   m_ObjectHideFlags: 0
