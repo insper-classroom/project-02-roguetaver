@@ -10,13 +10,65 @@ Segue um link para um vídeo de referência feito pelo canal [AIWarehouse](https
 
 ![Alt text](Images/example.png?raw=true)
 
+# Metodologia
+
+## Descrição
+
+O agente foi treinado no ambiente mostrado na imagem abaixo, seu objetivo era passar pela porta à direita, porém para isso, ele deve apertar o botão azul no chão antes (para apertar ele só precisa passar em cima).
+
+![Alt text](Images/env.png?raw=true)
+
 ## Action Space
 
 O agente é somente capaz de Andar, no eixo x e no eixo z.
 
 Outra ação disponível indiretamente é pressionar um botão no chão, o botão é acionado ao andar com o agente sobre o botão. Os botões quando pressionados abrem portas. 
 
-## Tutorial
+## Recompensas
+
+- +5 por conseguir escapar da sala
+- +1 por pressionar o botão
+- -1 por encostar em qualquer parede
+- -0.002f por cada ação de movimento
+
+## Treinamento
+
+No treinamento, foram utilizados 16 cópias identicas do ambiente, cada uma delas com seu agente, isso acelerou o tempo de treinamento já que 16 agentes estavam treinando ao mesmo tempo.
+
+![Alt text](Images/16env.png?raw=true)
+
+Para facilitar a visualização do treinamento, quando o agente atinge seu objetivo, o chão em que ele anda fica verde, e quando ele falha ao atingir uma parede, o chão fica vermelho, isso pode ser visto no gif abaixo:
+
+![Alt text](Images/RL-train.gif?raw=true)
+
+
+## Algoritmo e hiperparâmetros usados para treinamento
+
+| Atribute                   | Value           |
+| -------------------------- | --------------- |
+| Algorithm                  | ppo             |
+| batch_size                 | 1024            |
+| learning_rate              | 0.0003          |
+| beta                       | 0.005           |
+| epsilon                    | 0.2             |
+| lambd                      | 0.95            |
+| gamma                      | 0.99            |
+| max_steps                  | 5000            |
+| episodes                   | 500000          |
+
+# Resultados
+
+Abaixo temos um gráfico de rewards e em seguida um gráfico de duração de episódio:
+
+![Alt text](Images/rewards.png?raw=true)
+
+![Alt text](Images/duracao.png?raw=true)
+
+Abaixo temos um gif do modelo treinado em ação:
+
+![Alt text](Images/RL-model.gif?raw=true)
+
+## Tutorial de instalação
 
 A setup inicial pode ser um pouco difícil e chato, felizmente existe um ótimo [vídeo](https://youtu.be/zPFU30tbyKs) que ensina como instalar tudo corretamente. No entanto, o vídeo está um pouco desatualizado, então vou deixar aqui as etapas que você deve fazer diferente para deixar tudo certo.
 
@@ -31,27 +83,3 @@ Se você tiver problemas com o comando "mlagents-learn --help", tente os seguint
 7. Tente novamente o comando: "mlagents-learn --help"
 8. Se não funcionar (o meu não funcionou), rode o seguinte comando: "pip install protobuf==3.20.3"
 9. Tente novamente o comando: "mlagents-learn --help"
-
-## Resultados
-
-O agente foi treinado no ambiente mostrado na imagem abaixo, seu objetivo era passar pela porta à direita, porém para isso, ele deve apertar o botão azul no chão antes (para apertar ele só precisa passar em cima).
-
-![Alt text](Images/env.png?raw=true)
-
-Abaixo está um gif do processo de treinamento:
-
-![Alt text](Images/train.gif?raw=true)
-
-Abaixo estão 2 gráficos obtidos no tensorboard:
-
-- Cumulative Reward
-
-![Alt text](Images/rewards.png?raw=true)
-
-- Episode Length
-
-![Alt text](Images/duracao.png?raw=true)
-
-Abaixo está um gif do modelo treinado em ação:
-
-![Alt text](Images/model.gif?raw=true)
