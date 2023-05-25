@@ -24,7 +24,7 @@ O agente foi treinado em 2 ambientes distintos, mostrados nas imagens abaixo. O 
 
 ## Action Space
 
-O agente é somente capaz de Andar, no eixo x e no eixo z.
+O agente é somente capaz de Andar, no eixo x e no eixo z. Logo, ele possui 2 ações contínuas, que são representadas por um float.
 
 | Ação                       | Valor min       | Valor max      |
 | -------------------------- | --------------- | -------------- |
