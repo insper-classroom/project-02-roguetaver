@@ -44,10 +44,10 @@ O observation neste caso consiste em vetores de tamanho 3 com posições de Game
 
 ## Recompensas
 
-- +5 por conseguir escapar da sala
-- +1 por pressionar o botão
-- -1 por encostar em qualquer parede
-- -0.002 por cada ação de movimento
+- +999 por conseguir escapar da sala
+- +20 por pressionar o botão
+- -(distância da saida - distância do agente) por encostar em qualquer parede
+- -((distância da saida - distância do agente) * 0.0001f) por cada ação de movimento
 
 ## Início do episódio
 
