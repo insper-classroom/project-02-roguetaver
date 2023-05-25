@@ -33,7 +33,7 @@ Outra ação disponível indiretamente é pressionar um botão no chão, o botã
 - +5 por conseguir escapar da sala
 - +1 por pressionar o botão
 - -1 por encostar em qualquer parede
-- -0.002f por cada ação de movimento
+- -0.002 por cada ação de movimento
 
 ## Treinamento
 
