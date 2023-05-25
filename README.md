@@ -16,10 +16,10 @@ Segue um link para um vídeo de referência feito pelo canal [AIWarehouse](https
 
 O agente foi treinado em 2 ambientes distintos, mostrados nas imagens abaixo. O objetivo é passar pela porta à direita, porém para isso, ele deve apertar o botão azul no chão antes (para apertar ele só precisa passar em cima), além disso ele não pode encostar em nenhuma parede.
 
-- Ambiente 1
+Ambiente 1
 ![Alt text](Images/env.png?raw=true)
 
-- Ambiente 2
+Ambiente 2
 ![Alt text](Images/env2.png?raw=true)
 
 ## Action Space
