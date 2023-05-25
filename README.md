@@ -14,9 +14,13 @@ Segue um link para um vídeo de referência feito pelo canal [AIWarehouse](https
 
 ## Descrição
 
-O agente foi treinado no ambiente mostrado na imagem abaixo, seu objetivo era passar pela porta à direita, porém para isso, ele deve apertar o botão azul no chão antes (para apertar ele só precisa passar em cima).
+O agente foi treinado em 2 ambientes distintos, mostrados nas imagens abaixo. O objetivo é passar pela porta à direita, porém para isso, ele deve apertar o botão azul no chão antes (para apertar ele só precisa passar em cima), além disso ele não pode encostar em nenhuma parede.
 
+- Ambiente 1
 ![Alt text](Images/env.png?raw=true)
+
+- Ambiente 2
+![Alt text](Images/env2.png?raw=true)
 
 ## Action Space
 
@@ -58,15 +62,25 @@ Para facilitar a visualização do treinamento, quando o agente atinge seu objet
 
 # Resultados
 
-Abaixo temos um gráfico de rewards e em seguida um gráfico de duração de episódio:
+Abaixo temos um gráfico de rewards e em seguida um gráfico de duração de episódio, ambos no ambiente 1:
 
 ![Alt text](Images/rewards.png?raw=true)
 
 ![Alt text](Images/duracao.png?raw=true)
 
-Abaixo temos um gif do modelo treinado em ação:
+Abaixo temos um gif do modelo treinado em ação no ambiente 1:
 
 ![Alt text](Images/RL-model.gif?raw=true)
+
+Abaixo temos um gráfico de rewards e em seguida um gráfico de duração de episódio, ambos no ambiente 2:
+
+![Alt text](Images/rewards2.png?raw=true)
+
+![Alt text](Images/duracao2.png?raw=true)
+
+Abaixo temos um gif do modelo treinado em ação no ambiente 2:
+
+![Alt text](Images/RL-model2.gif?raw=true)
 
 ## Tutorial de instalação
 
