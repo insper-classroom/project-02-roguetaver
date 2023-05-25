@@ -20,6 +20,8 @@ O agente foi treinado em 2 ambientes distintos, mostrados nas imagens abaixo. O 
 
 ![Alt text](Images/env2.png?raw=true "Ambiente 2")
 
+![Alt text](Images/env3.png?raw=true "Ambiente 3")
+
 ## Action Space
 
 O agente é somente capaz de Andar, no eixo x e no eixo z. Logo, ele possui 2 ações contínuas, que são representadas por um float.
@@ -57,7 +59,7 @@ O episódio acaba se o agente chegar na saída ou se enconstar em alguma parede.
 
 ## Treinamento
 
-No treinamento, foram utilizados 16 cópias identicas do ambiente, cada uma delas com seu agente, isso acelerou o tempo de treinamento já que 16 agentes estavam treinando ao mesmo tempo.
+No treinamento, foram utilizados 16 cópias identicas do ambiente, cada uma delas com seu agente, isso acelerou o tempo de treinamento já que 16 agentes estavam treinando ao mesmo tempo. Lembrando que para cada ambiente foi feito um treinamento individual para aquele ambiente.
 
 ![Alt text](Images/16env.png?raw=true)
 
@@ -74,7 +76,7 @@ Para facilitar a visualização do treinamento, quando o agente atinge seu objet
 | batch_size                 | 1024            |
 | learning_rate              | 0.0003          |
 | beta                       | 0.005           |
-| epsilon                    | 0.2             |
+| epsilon                    | 0.9             |
 | lambd                      | 0.95            |
 | gamma                      | 0.99            |
 | max_steps                  | 5000            |
@@ -84,9 +86,9 @@ Para facilitar a visualização do treinamento, quando o agente atinge seu objet
 
 Abaixo temos um gráfico de rewards e em seguida um gráfico de duração de episódio, ambos no ambiente 1:
 
-![Alt text](Images/rewards.png?raw=true)
+![Alt text](Images/rewards_1.png?raw=true)
 
-![Alt text](Images/duracao.png?raw=true)
+![Alt text](Images/duracao_1.png?raw=true)
 
 Abaixo temos um gif do modelo treinado em ação no ambiente 1:
 
@@ -94,13 +96,32 @@ Abaixo temos um gif do modelo treinado em ação no ambiente 1:
 
 Abaixo temos um gráfico de rewards e em seguida um gráfico de duração de episódio, ambos no ambiente 2:
 
-![Alt text](Images/rewards2.png?raw=true)
+![Alt text](Images/rewards2_1.png?raw=true)
 
-![Alt text](Images/duracao2.png?raw=true)
+![Alt text](Images/duracao2_1.png?raw=true)
 
 Abaixo temos um gif do modelo treinado em ação no ambiente 2:
 
 ![Alt text](Images/RL-model2.gif?raw=true)
+
+Abaixo temos um gráfico de rewards e em seguida um gráfico de duração de episódio, ambos no ambiente 3:
+
+![Alt text](Images/rewards3.png?raw=true)
+
+![Alt text](Images/duracao3.png?raw=true)
+
+Abaixo temos um gif do modelo treinado em ação no ambiente 3:
+
+![Alt text](Images/RL-model3.gif?raw=true)
+
+Abaixo temos um gráfico de rewards e em seguida um gráfico de duração de episódio, comparando o desempenho nos 3 ambientes: 
+- verde = ambiente 1
+- laranja = ambiente 2
+- cinza = ambiente 3
+
+![Alt text](Images/rewards-comp.png?raw=true)
+
+![Alt text](Images/duracao-comp.png?raw=true)
 
 ## Tutorial de instalação
 
