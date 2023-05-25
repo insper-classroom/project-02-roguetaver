@@ -1508,7 +1508,7 @@ PrefabInstance:
       objectReference: {fileID: 1467848607624890855}
     - target: {fileID: 2407098159062039168, guid: 7d585ada57fe0534eadf1f6e94f83b37, type: 3}
       propertyPath: MaxStep
-      value: 5000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 2407098159062039168, guid: 7d585ada57fe0534eadf1f6e94f83b37, type: 3}
       propertyPath: targetTransform
@@ -1518,6 +1518,10 @@ PrefabInstance:
       propertyPath: floorMeshRenderer
       value: 
       objectReference: {fileID: 2125908211901338321}
+    - target: {fileID: 8467006193473420203, guid: 7d585ada57fe0534eadf1f6e94f83b37, type: 3}
+      propertyPath: m_BehaviorType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8671531576223434273, guid: 7d585ada57fe0534eadf1f6e94f83b37, type: 3}
       propertyPath: m_Name
       value: Agent

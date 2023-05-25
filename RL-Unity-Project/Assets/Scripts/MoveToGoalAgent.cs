@@ -42,8 +42,8 @@ public class MoveToGoalAgent : Agent
         float moveX = actions.ContinuousActions[0];
         float moveZ = actions.ContinuousActions[1];
         //float turn = actions.ContinuousActions[1];
-
-        AddReward(-0.002f);
+        float rewardValue = Vector3.Distance(targetTransform.localPosition,transform.localPosition);
+        AddReward(-rewardValue * 0.0001f);
 
         Vector3 moveDir = new Vector3 (moveX,0,moveZ);
         transform.localPosition += moveDir * Time.deltaTime * moveSpeed;
@@ -63,18 +63,19 @@ public class MoveToGoalAgent : Agent
         if(other.TryGetComponent<DoorButton>(out DoorButton doorButton)){
             if(!doorIsOpen) {
                 doorIsOpen = true;
-                AddReward(1f);
+                AddReward(20f);
             }
         }
         if(other.TryGetComponent<Exit>(out Exit exit)){
-            AddReward(5f);
+            SetReward(999f);
             if(trainingMode){
                 floorMeshRenderer.material = winMaterial;
             }
             EndEpisode();
         }
         if(other.TryGetComponent<Wall>(out Wall wall)){
-            SetReward(-1f);
+            float rewardValue = Vector3.Distance(targetTransform.localPosition,transform.localPosition);
+            AddReward(-rewardValue);
             if(trainingMode){
                 floorMeshRenderer.material = loseMaterial;
             }
