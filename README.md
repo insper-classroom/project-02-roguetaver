@@ -26,7 +26,21 @@ O agente foi treinado em 2 ambientes distintos, mostrados nas imagens abaixo. O 
 
 O agente é somente capaz de Andar, no eixo x e no eixo z.
 
+| Ação                       | Valor min       | Valor max      |
+| -------------------------- | --------------- | -------------- |
+| mover no eixo X            | -1              | 1              |
+| mover no eixo Y            | -1              | 1              |
+
 Outra ação disponível indiretamente é pressionar um botão no chão, o botão é acionado ao andar com o agente sobre o botão. Os botões quando pressionados abrem portas. 
+
+## Observation Space
+
+O observation neste caso consiste em vetores de tamanho 3 com posições de GameObjects no ambiente.
+
+| Observation                | Tipo      | 
+| -------------------------- | --------- | 
+| posição do agente          | Vector3   |
+| posição da saída           | Vector3   |
 
 ## Recompensas
 
@@ -34,6 +48,14 @@ Outra ação disponível indiretamente é pressionar um botão no chão, o botã
 - +1 por pressionar o botão
 - -1 por encostar em qualquer parede
 - -0.002 por cada ação de movimento
+
+## Início do episódio
+
+No início de cada episódio, o agente é colocado em sua posição inicial, e a porta volta a ficar ativa.
+
+## Fim do episódio
+
+O episódio acaba se o agente chegar na saída ou se enconstar em alguma parede.
 
 ## Treinamento
 
